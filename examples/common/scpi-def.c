@@ -44,15 +44,18 @@ static scpi_result_t DMM_MeasureVoltageDcQ(scpi_t * context) {
     scpi_number_t param1, param2;
     char bf[15];
     fprintf(stderr, "meas:volt:dc\r\n"); /* debug command name */
-
+    memset(&param1,0,sizeof(param1));
+    memset(&param2,0,sizeof(param2));
     /* read first parameter if present */
     if (!SCPI_ParamNumber(context, scpi_special_numbers_def, &param1, FALSE)) {
         /* do something, if parameter not present */
+        fprintf(stderr, "\t error no param1\r\n");
     }
 
     /* read second paraeter if present */
     if (!SCPI_ParamNumber(context, scpi_special_numbers_def, &param2, FALSE)) {
         /* do something, if parameter not present */
+        fprintf(stderr, "\t error no param2\r\n");
     }
 
 
@@ -72,7 +75,8 @@ static scpi_result_t DMM_MeasureVoltageAcQ(scpi_t * context) {
     scpi_number_t param1, param2;
     char bf[15];
     fprintf(stderr, "meas:volt:ac\r\n"); /* debug command name */
-
+    memset(&param1,0,sizeof(param1));
+    memset(&param2,0,sizeof(param2));
     /* read first parameter if present */
     if (!SCPI_ParamNumber(context, scpi_special_numbers_def, &param1, FALSE)) {
         /* do something, if parameter not present */

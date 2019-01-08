@@ -50,5 +50,10 @@ SCPI parser library is based on these standards
 <tr><td>Character data<td><code>MINimum</code>, <code>DEFault</code>, <code>INFinity</code></tr>
 </table>
 
-
 [![travis build](https://travis-ci.org/j123b567/scpi-parser.svg?branch=master)](https://travis-ci.org/j123b567/scpi-parser) [![Coverage Status](https://coveralls.io/repos/j123b567/scpi-parser/badge.svg?branch=master&service=github)](https://coveralls.io/github/j123b567/scpi-parser?branch=master)
+
+**增加嵌入式环境交叉编译环境脚本**
+NOTE:注意修改交叉编译工具路径
+```
+#source environment-setup
+```
